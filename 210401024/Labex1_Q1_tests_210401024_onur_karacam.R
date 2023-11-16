@@ -13,3 +13,7 @@ test_that("MapsThatChangedOurWorld_StoryMap_Data.csv dosyas?? aktif dizinde mevc
 test_that("'maps' adli degisken Global Workspace'te mevcut mudur", {
   expect_true(exists("maps"))
 })
+#2.6
+test_that("Test : 'maps' nesnesi bir data.frame'dir", {
+  expect_true(is.data.frame(maps))
+})
