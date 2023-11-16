@@ -30,3 +30,7 @@ test_that("'maps' adli data.frame'in 'Latitude' adli sutunu numeric degerlerden 
   expect_true(all(sapply(maps$Latitude, is.numeric)))
   #"31.2001" R dilinde numeric olarak tan??mlanmaz.Karakter dizisidir.
 })
+#2.10
+test_that("'maps' adli data.frame'in 'Longitude' adli sutunu numeric degerlerden olusuyor mu", {
+  expect_true(all(sapply(maps$Longitude, is.numeric)))
+})

@@ -10,3 +10,6 @@ maps$Longitude <- gsub("[EW]","",maps$Longitude)
 #1.6
 maps$Year <- gsub("AD","",maps$Year)
 maps$Year <- as.numeric(maps$Year)
+#1.7
+maps$Longitude <- as.numeric(maps$Longitude)
+maps$Latitude <- as.numeric(maps$Latitude)
