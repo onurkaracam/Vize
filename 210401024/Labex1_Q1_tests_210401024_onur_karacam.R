@@ -34,3 +34,7 @@ test_that("'maps' adli data.frame'in 'Latitude' adli sutunu numeric degerlerden 
 test_that("'maps' adli data.frame'in 'Longitude' adli sutunu numeric degerlerden olusuyor mu", {
   expect_true(all(sapply(maps$Longitude, is.numeric)))
 })
+#2.11
+test_that("Test : 'idx' nesnesi Global Workspace'te mevcut olmal??d??r", {
+  expect_true(exists("idx"))
+})

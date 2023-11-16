@@ -13,3 +13,5 @@ maps$Year <- as.numeric(maps$Year)
 #1.7
 maps$Longitude <- as.numeric(maps$Longitude)
 maps$Latitude <- as.numeric(maps$Latitude)
+#1.8
+hist(maps$Year, breaks = 10)
