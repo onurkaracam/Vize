@@ -38,3 +38,7 @@ test_that("'maps' adli data.frame'in 'Longitude' adli sutunu numeric degerlerden
 test_that("Test : 'idx' nesnesi Global Workspace'te mevcut olmal??d??r", {
   expect_true(exists("idx"))
 })
+#2.12
+test_that("Test : 'idx' nesnesinin tipi (class'??) 'integer' midir", {
+  expect_equal(class(idx), "integer")
+})
