@@ -42,3 +42,17 @@ test_that("Test : 'idx' nesnesi Global Workspace'te mevcut olmal??d??r", {
 test_that("Test : 'idx' nesnesinin tipi (class'??) 'integer' midir", {
   expect_equal(class(idx), "integer")
 })
+#2.13
+test_that("'maps' adli data.frame'in 'Year' adli sutunu numeric degerlerden olusuyor mu", {
+  expect_true(all(sapply(maps$Year, is.numeric)))
+})
+#2.14
+test_that("'maps' adli data.frame'in 'Longitude' adli sutununun belirli elemanlari negatif numeric degerler iceriyor mu", {
+  expect_true(all(sapply(c(maps$Longitude[3], maps$Longitude[9], maps$Longitude[10]), function(x) is.numeric(x) && x < 0)))
+})
+#2.15
+test_that("Test : 'finalResult' adli data.frame var, 3 sutunlu ve sutun isimleri dogru mu", {
+  expect_equal(ncol(finalResult), 3)
+  
+  expect_equal(colnames(finalResult), c("Longitude", "Latitude", "Year"))
+})
