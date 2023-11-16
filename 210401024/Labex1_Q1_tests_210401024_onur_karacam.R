@@ -18,6 +18,10 @@ test_that("Test : 'maps' nesnesi bir data.frame'dir", {
   expect_true(is.data.frame(maps))
 })
 #2.7
-test_that("'maps' adl?? data.frame'in ilk s??tunun ad?? 'City' midir", {
+test_that("'maps' adli data.frame'in ilk sutunun adi 'City' midir", {
   expect_equal(colnames(maps)[1], "City")
+})
+#2.8
+test_that("'maps' adli data.frame'in 5. sutunun adinda 'Title' kelimesi geciyor mu", {
+  expect_match(colnames(maps)[5], "Title",)
 })

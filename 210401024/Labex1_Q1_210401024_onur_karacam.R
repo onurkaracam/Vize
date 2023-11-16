@@ -5,4 +5,5 @@ maps <- read.csv("https://raw.githubusercontent.com/scizmeli/Red/master/MapsThat
 maps$Latitude <- gsub("N","",maps$Latitude)
 #1.4
 idx <- grep("W", maps$Longitude)
-
+#1.5
+maps$Longitude <- gsub("[EW]","",maps$Longitude)
