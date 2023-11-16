@@ -7,3 +7,6 @@ maps$Latitude <- gsub("N","",maps$Latitude)
 idx <- grep("W", maps$Longitude)
 #1.5
 maps$Longitude <- gsub("[EW]","",maps$Longitude)
+#1.6
+maps$Year <- gsub("AD","",maps$Year)
+maps$Year <- as.numeric(maps$Year)
